@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<p>~~~!!!</p>
+<script>
+    $.ajax({
+        url: 'http://localhost:7777/admin/login',
+        type: "POST",
+        data: {
+            aid: '1001',
+            pwd: '123456'
+        },
+        success: function (data, textStatus, jqXHR) {
+            alert('成功');
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            alert(jqXHR.status + ": " + jqXHR.responseJSON.message);
+        }
+    });
+</script>
+
+</body>
+</html>
