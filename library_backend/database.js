@@ -4,7 +4,7 @@ const notice = require('./controllers/notice');
 let connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '990123',
+    password: '******',
     port: '3306',
     database: 'library'
 });
